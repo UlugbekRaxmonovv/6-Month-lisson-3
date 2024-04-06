@@ -1,0 +1,89 @@
+
+body{
+    background-color: #0E0E0E;
+}
+.box{
+    margin-left: 10%;
+}
+.hammasi{
+    max-width: 1100px;
+    padding: 20px 0;
+    background-color: #2362CC;
+    display: flex;
+    justify-content: center;
+    height: 95vh;
+}
+.hammasi-all{
+    width: 600px;
+    padding: 40px 0;
+    background-color: white;
+    border-radius: 15px;
+    height: 60vh;
+}
+.input-all{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.inputrow{
+    padding: 4px;
+    width: 400px;
+    background-color: white;
+    border: 2px solid #5B6EB2;
+    border-radius: 10px;
+}
+input{
+    outline: none;
+    border: none;
+}
+.input-all >button{
+    padding: 8px 32px;
+    background-color: #2B68E5;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    overflow: hidden;
+}
+button:active{
+    transform: scale(1.05);
+}
+
+.input{
+    width: 540px;
+    border-radius: 10px;
+    height: 40px;    
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+
+.input-show >h3{
+    padding: 0 10px;
+}
+.input-show{
+    display: flex;
+    align-items: center;
+    gap: 400px;
+    background-color: antiquewhite;   
+    width: 400px;
+    height: 40px;
+    padding: 10px 0;
+    margin-top: 20%;
+    
+}
+    .il{
+        width: 40px;
+        height: 40px;
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        margin-left: 80%;
+    }
+    .delet{
+        font-size: 30px;
+        color: white;
+    }

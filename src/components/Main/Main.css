@@ -1,0 +1,17 @@
+.all{
+    position: fixed;
+    width: 200px;
+    height: 400px;
+    background-color: red;
+    margin-left: -300%;
+    transition: .13s ease;
+
+}
+.btn{
+    background-color: aqua;
+    padding:4px 16px ;
+    border: none;
+}
+.show{
+    margin-left: 0%;
+}
