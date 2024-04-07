@@ -19,13 +19,15 @@ body{
     padding: 40px 0;
     background-color: white;
     border-radius: 15px;
-    height: 60vh;
-    margin-top: 15%;
+    /* height: 60vh; */
+    margin-top: 10%;
 }
 .input-all{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 40px;
+  
 }
 .inputrow{
     padding: 4px;
@@ -37,9 +39,11 @@ body{
 input{
     outline: none;
     border: none;
+    height: 40px;
 }
 .input-all >button{
     padding: 8px 32px;
+    height: 55px;
     background-color: #2B68E5;
     border: none;
     border-radius: 10px;
@@ -51,30 +55,30 @@ button:active{
     transform: scale(1.05);
 }
 
-.input{
+.logo{
     width: 540px;
     border-radius: 10px;
     height: 40px;    
     display: flex;
     align-items: center;
-    margin-left: 5%;
+    justify-content: space-between;
+    margin-left: -2%;
+    background-color: #C5E1E5;   
+    border: 1px solid #C0D2D7;
+    padding: 5px 0;
 }
 
 
-.input-show >h3{
+.loga-all >li{
     padding: 0 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    max-width: 200px;
+    width: 100%;
 }
-.input-show{
-    display: flex;
-    align-items: center;
-    gap: 400px;
-    background-color: antiquewhite;   
-    width: 400px;
-    height: 40px;
-    padding: 10px 0;
-    margin-top: 20%;
-    
-}
+
     .il{
         width: 40px;
         height: 40px;
@@ -83,9 +87,10 @@ button:active{
         justify-content: center;
         align-items: center;
         border-radius: 10px;
-        margin-left: 80%;
+        margin-left: -15%;
     }
     .delet{
         font-size: 30px;
         color: white;
     }
+

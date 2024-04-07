@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { MdDelete } from "react-icons/md";
+import Confetti from 'react-confetti'
+import { toast } from 'react-toastify';
 import "./Form.css";
 
 const Form = () => {
@@ -7,24 +9,45 @@ const Form = () => {
   const [data, sitdata] = useState([]);
   const javob = (e) => {
     e.preventDefault();
-    if (!name.trim()) return alert("Ism yozing");
-    let javob1 = {
-      name,
-    };
-    sitdata([...data, javob1]);
+    if (!name.trim()){
+       alert("Ism yozing")
+       return
+      };
+    const newData ={name}
+    sitdata([...data,newData]);
     sitNmae("");
   };
-  let usirs = data?.map((u, ins) => (
-    <div className="input" key={ins}>
-        <div className="input-show">
- <h3>{u.name}</h3>
- </div>
-      <div className="input-show">
-     <div className="il">
-     <MdDelete className="delet" />
-            </div>
-     </div>
-        </div>
+  const go = ()=>{
+    toast.error('Malumot kiriting', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      })
+  }
+  const handleDelete  = (index)=>{
+    const newData =data.filter((_, i)=> i !== index); 
+    sitdata(newData)
+  }
+  let usirs = data?.map((user, index) => (
+<ul key={index} >
+<div className="logo">
+<div className="loga-all">
+<li>{user.name}</li>
+</div>
+<div className="loga-all">
+<div className="il">
+<MdDelete 
+onClick={() => handleDelete(index)}   
+className="delet" />
+    </div>
+  </div>
+</div>
+</ul>
 
 
   ));
@@ -33,38 +56,39 @@ const Form = () => {
       <div className="hammasi">
         <div className="hammasi-row">
         <div className="hammasi-all">
-          <form action="" onSubmit={javob}>
+          <form onSubmit={javob}>
+        
           <div className="input-all">
             <div className="inputrow">
             <input
               required
               type="name"
               value={name}
-              onChange={(event) => sitNmae(event.target.value)}
+              onChange={(e) => sitNmae(e.target.value)}
             />
 
           
             </div>
             <div className="input-all">
-            <button>Add</button>
+            <button onClick={go}>Add</button>
             </div>
         </div>
           </form>
           {usirs}
-          {/* <div className="input">
-          <div className="input-show">
-                
-            </div>
-            <div className="input-show">
-
-            </div>
-          </div> */}
+ 
         </div>
-        </div>
-     
+        </div> 
       </div>
+
+    
+      <Confetti
+      numberOfPieces={300} />
     </div>
   );
 };
 
 export default Form;
+
+
+
+
